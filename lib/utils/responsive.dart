@@ -8,7 +8,7 @@ class Responsive {
     final Size size = MediaQuery.of(context).size;
     _width = size.width;
     _height = size.height;
-    _diagonal = sqrt(pow(_width, 2)) + sqrt(pow(_height, 2));
+    _diagonal = sqrt(pow(_width, 2) + pow(_height, 2));
     _isTablet = size.shortestSide >= 600;
     //c2  + a2 + b2 => c =
   }

@@ -17,6 +17,7 @@ class _HomePageState extends State<HomePage> {
     final Responsive responsive = Responsive.of(context);
     final double pinkSize = responsive.wp(80);
     final double orangeSize = responsive.wp(57);
+
     return Scaffold(
       body: GestureDetector(
         onTap: () {
@@ -29,10 +30,10 @@ class _HomePageState extends State<HomePage> {
             color: Colors.white,
             child: Stack(
               alignment: Alignment.center,
-              children: [
+              children: <Widget>[
                 Positioned(
-                  top: -(pinkSize) * (responsive.isTablet ? 0.45 : 0.4),
-                  right: -(pinkSize) * (responsive.isTablet ? 0.25 : 0.2),
+                  top: -responsive.dp(22),
+                  right: -pinkSize * 0.2,
                   child: Circle(
                     size: pinkSize,
                     colors: const [
@@ -42,8 +43,8 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Positioned(
-                  top: -(orangeSize) * (responsive.isTablet ? 0.5 : 0.55),
-                  left: -(orangeSize) * (responsive.isTablet ? 0.13 : 0.15),
+                  top: -orangeSize * 0.55,
+                  left: -orangeSize * 0.15,
                   child: Circle(
                     size: orangeSize,
                     colors: const [
@@ -53,26 +54,26 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 Positioned(
-                  top: pinkSize * (responsive.isTablet ? 0.3 : 0.35),
+                  top: pinkSize * 0.35,
                   child: Column(
-                    children: [
+                    children: <Widget>[
                       IconContainer(
-                        size: responsive.wp(responsive.isTablet ? 13 : 20),
+                        size: responsive.wp(17),
                       ),
                       SizedBox(
-                        height: responsive.dp(responsive.isTablet ? 2.5 : 3),
+                        height: responsive.dp(3),
                       ),
                       Text(
-                        'Hello Again \n Welcome Back!',
+                        "Hello Again\nWelcome Back!",
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          fontSize: responsive.dp(1.7),
+                          fontSize: responsive.dp(1.8),
                         ),
-                      ),
+                      )
                     ],
                   ),
                 ),
-                const LoginForm(),
+                const LoginForm()
               ],
             ),
           ),

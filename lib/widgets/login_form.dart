@@ -14,6 +14,8 @@ class _LoginFormState extends State<LoginForm> {
   Widget build(BuildContext context) {
     final Responsive responsive = Responsive.of(context);
 
+    print(responsive.dp(10));
+
     return Positioned(
       bottom: 30,
       child: Container(
@@ -65,7 +67,7 @@ class _LoginFormState extends State<LoginForm> {
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize:
-                              responsive.dp(responsive.isTablet ? 0.9 : 1.2),
+                              responsive.dp(responsive.isTablet ? 1.2 : 1.5),
                         ),
                       ),
                     ),
@@ -74,7 +76,7 @@ class _LoginFormState extends State<LoginForm> {
               ),
             ),
             SizedBox(
-              height: responsive.dp(5),
+              height: responsive.dp(2),
             ),
             SizedBox(
               width: double.infinity,
@@ -90,7 +92,7 @@ class _LoginFormState extends State<LoginForm> {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontSize: responsive.dp(responsive.isTablet ? 0.9 : 1.2),
+                    fontSize: responsive.dp(responsive.isTablet ? 1.2 : 1.7),
                   ),
                 ),
               ),
@@ -104,7 +106,7 @@ class _LoginFormState extends State<LoginForm> {
                 Text(
                   'New to friend Desi?',
                   style: TextStyle(
-                    fontSize: responsive.dp(responsive.isTablet ? 0.9 : 1.2),
+                    fontSize: responsive.dp(responsive.isTablet ? 0.9 : 1.5),
                   ),
                 ),
                 ElevatedButton(
@@ -124,7 +126,7 @@ class _LoginFormState extends State<LoginForm> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.redAccent,
-                      fontSize: responsive.dp(responsive.isTablet ? 0.9 : 1.2),
+                      fontSize: responsive.dp(responsive.isTablet ? 1.2 : 1.7),
                     ),
                   ),
                 ),
