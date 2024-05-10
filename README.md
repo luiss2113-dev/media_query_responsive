@@ -1,6 +1,6 @@
 # flutter_responsive_app
 
-A new Flutter project.
+Uso de diagonal para identificar crecimiento porcentual de la pantalla y reajustar tamaños dentro de la pantalla
 
 ## Getting Started
 
